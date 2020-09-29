@@ -1,0 +1,69 @@
+.miniProduct {
+    --width: 250px;
+    width: var(--width);
+    box-shadow: 5px 5px 20px #bbb, -5px -5px 20px #bbb;
+    position: relative;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+.miniProduct .imageHolder {
+    width: var(--width);
+    height: var(--width);
+    position: relative;
+    overflow: hidden;
+}
+
+.miniProduct .imageHolder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.miniProduct .imageHolder .moreActions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+    filter: opacity(0);
+}
+
+.miniProduct .imageHolder .moreActions>* {
+    margin: 0.5em
+}
+
+.miniProduct:hover .moreActions {
+    /* cursor: pointer; */
+    transform: scale(1);
+    filter: opacity(1);
+}
+
+.miniProduct:hover img {
+    transform: scale(1.2);
+}
+
+.miniProduct .textHolder {
+    margin-top: 10px;
+    padding: 15px 20px;
+    animation: all 0.5s ease-in-out;
+}
+
+.miniProduct .textHolder .title {
+    text-transform: uppercase;
+}
+
+.miniProduct .textHolder .discount {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 0.9em;
+}
