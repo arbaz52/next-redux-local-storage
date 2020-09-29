@@ -26,7 +26,7 @@ export const actionGetProductsSuccessful = (products) => {
 export const getProducts = () => {
     return (dispatch) => {
         dispatch(actionGetProducts())
-        axios.get("http://localhost:3000/api/products")
+        axios.get("https://rstorer.herokuapp.com/api/products")
         .then(res => {
             dispatch(actionGetProductsSuccessful(res.data))
         })
